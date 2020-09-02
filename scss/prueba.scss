@@ -1,0 +1,429 @@
+$myFont: 'Raleway', sans-serif;
+$myFontWeight:(
+	"regular":400,
+	"medium":500,
+	"bold":700,
+	);
+$myColor:black;
+$myBgColor:white;
+$mobile:800px;
+
+
+
+@function weight($weight-name) {
+	@return map-get($myFontWeight, $weight-name);
+
+}
+
+@mixin theme($light-theme: true) {
+	@if $light-theme {
+		background: lighten($myBgColor, 100%);
+		color: darken($myColor, 100%);
+	}
+		
+	
+}
+
+@mixin mobile {
+	@media (max-width: 800px) {
+		@content;
+
+	}
+
+}
+
+
+
+
+	
+
+
+
+
+
+
+body {
+	
+	font-family: $myFont;
+	color: $myColor,
+}
+
+
+
+
+/*TYPOGRAPHY*/
+
+h1 {
+	font-size: 50px;
+	font-weight: 600px;
+	line-height: 55px;
+	padding-top: 100px;
+}
+
+h2 { 
+	font-size: 25px;
+	font-weight: 700px;
+
+}
+
+h3{
+	font-size: 20px;
+	font-weight: 700px;
+	color: black;
+
+
+}
+
+p {
+	font-size: 13px;
+	color:#000;
+	margin-bottom: 0;
+}
+
+
+
+.topmargin-xs {
+	margin-top: 15px;
+}
+.topmargin-sm {
+	margin-top: 30px;
+}
+.topmargin-lg {
+	margin-top: 60px;
+}
+
+
+/* NAVBAR*/
+
+.navbar {
+	background-color: white;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0 , .05);
+	height: 60px;
+	z-index: 10000;
+	
+}
+
+.nav-link {
+	color: #000;
+	background-color: #fff;
+}
+
+.nav-link:hover {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	color: #000;
+	
+}
+
+.logo-brand {
+	min-width: 70px;
+	max-width: 90px;
+	display: flex;
+
+	}
+
+.navbar-toggler {
+	font-size: 40px;
+
+	
+	
+}
+.navbar-toggler:focus {
+	outline: none;
+	
+
+}
+
+.hambur {
+	position: relative;
+	bottom: 13px;
+
+}
+
+/* BACKGROUND IMAGE + BUTTON */
+
+#hero {
+	background-image: url(https://popbee.com/image/2017/07/ordinary-launches-two-vitamin-c-serums0.jpg);
+	background-size: cover;
+	padding-top: 90px;
+	min-height: 500px;
+	max-height: 900px;
+	color: #fff;
+}
+#hero p {
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 0;
+	padding-top: 5px;
+	
+}
+
+#hero h1 {
+	text-shadow: 3px 3px 2px #e0e0e0;
+
+}
+
+#hero a {
+	font-size: 13px;
+}
+.content-center {
+	max-width: 800px;
+	margin: 40px auto 60px auto;
+	text-align: center;
+	color: #000;
+}
+
+.content-center a {
+	color: black;
+	font-weight:400px;
+	font-size: 11px;
+	padding-top: 10px;
+
+}
+.content-center a:hover {
+	font-size: 13px;
+	font-weight:700px;
+	
+}
+
+
+.btn {
+	font-style: 12px;
+	padding: 10px 20px;
+	min-width: 130px;
+	border-radius: 30px;
+	display: inline-block;
+	-webkit-box-shadow: 2px 2px 5px #999;
+  	-moz-box-shadow: 2px 2px 5px #999;
+
+}
+
+.btn-light {
+	background-color:#fff;
+	color: #1a1a1a;
+	
+}
+
+/*INDEX PRODUCTS*/
+
+.col-md-4{
+	background-color: #e0e0e0;
+	padding:20px;
+}
+
+.products-container {
+	position: relative;
+	overflow: hidder;
+	margin: 10px 0;
+	border-radius: 2px;
+
+	-moz-transition: all 0.8s;
+
+	-webkit-transition: all 0.8s;
+
+	transition: all 0.8s;
+}
+
+.product-cotainer p {
+	font-size: 12px}
+
+
+
+
+
+
+
+.products-details {
+	position: absolute;
+	bottom: 20px;
+	right: 50px;
+	left: 50px;
+	z-index:9000; 
+	text-align: center;
+}
+
+.products-details p {
+font-size: 12px;
+}
+
+
+
+
+.block__element {
+	background-color: #e0e0e0;
+	color: #000000;
+	padding: 1em;
+	font-size: 13px;
+}
+
+
+
+
+/*ABOUT*/
+
+.main {
+
+	text-align: left;
+	width: 65%;
+	margin: 0 auto;
+
+	.main__paragraph {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-weight: weight(regular);
+		
+
+	}
+	@include mobile {
+		width: 80%
+
+	}
+
+}
+
+
+.light {
+	@include theme($light-theme: true);
+}
+
+
+
+
+
+@media (max-width: 575.98px) { 
+ h1 {
+ 	font-size: 40px;
+ 	line-height: normal;
+ 	} 
+ }
+
+.navbar {
+	height: 90px;
+}
+h3 {
+	font-size: 14px;
+	margin: 0px;
+	
+
+}
+.products-container p{
+	font-size: 10px;
+	margin: 0 -40px;
+
+	
+}
+
+
+/* PRODUCTS*/ 
+
+/*CONTACT*/ 
+
+
+.form-control{
+	font-size: 13px;
+	border:1px solid #cacaca;
+	padding: 15px;
+	border-radius: 2px;
+	
+}
+.form-control:focus{
+	border: 1px solid #000000;
+	outline: none;
+	box-shadow: none;
+}
+
+#contact {
+	background-color: #e0e0e0;
+	padding-bottom: 0px;
+}
+/*FOOTER*/
+
+footer{
+	text-align: center;
+}
+
+
+
+
+
+ 
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+h3 {
+	font-size: 14px;
+	margin: 0px;
+
+
+}
+.products-container p{
+	font-size: 10px;
+	margin: 0 -40px;
+
+	
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+h3 {
+	font-size: 14px;
+	margin: 0px;
+	 
+
+}
+.products-container p{
+	font-size: 10px;
+	margin: 0 -40px;
+
+	
+}
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+
+@media (min-width: 1200px) {  }
+
+@media only screen and (min-width: 1000px) {
+
+	h3 {
+		padding-bottom: 5px;
+		font-weight: weight(bold);
+	}
+
+	.products-container:hover {
+
+	-moz-transform: scale(1.1);
+
+	-webkit-transform: scale(1.1);
+
+	transform: scale(1.1);
+
+	-webkit-box-shadow: 2px 2px 5px #999;
+
+ 	-moz-box-shadow: 2px 2px 5px #999;
+
+ }
+
+
+.products-container p {
+	font-size: 13px;
+
+}
+
+.products-nohover {
+pointer-events: none;
+}
+
+
+}
+
+
+
+
+
+
