@@ -14,5 +14,13 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emiclausse/The-Ordinary-Arg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emiclausse/The-Ordinary-Arg/issues"
+  },
+  "homepage": "https://github.com/emiclausse/The-Ordinary-Arg#readme",
   "description": ""
 }

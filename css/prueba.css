@@ -61,7 +61,11 @@ p {
 
 .hambur {
   position: relative;
-  bottom: px; }
+  bottom: 13px; }
+
+.hambur .nav-link {
+  padding-left: 20px;
+  padding-right: 20px; }
 
 /* BACKGROUND IMAGE + BUTTON */
 #hero {
@@ -195,7 +199,7 @@ h3 {
 
 #contact {
   background-color: #e0e0e0;
-  padding-bottom: 40px; }
+  padding-bottom: 0px; }
 
 /*FOOTER*/
 footer {
