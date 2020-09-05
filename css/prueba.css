@@ -210,7 +210,9 @@ footer {
     margin: 0px; }
   .products-container p {
     font-size: 10px;
-    margin: 0 -40px; } }
+    margin: 0 -40px; }
+  .container {
+    margin-top: 60px; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   h3 {
